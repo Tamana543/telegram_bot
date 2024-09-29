@@ -18,9 +18,22 @@ async def custom_command(update : Update, context: ContextTypes.DEFAULT_TYPE):
 # BOT responses 
 
 def response_En(text: str) -> str :
-      if 'hello' in text:
+      # Remember python is sensetive on lower and upperCase 
+      uper_lower_text : str = text.lower()
+
+      if 'hello' in uper_lower_text:
             return " such a polite friend you are , Hi ;))"
+      if 'I need Your Help' in uper_lower_text:
+            return "Ohh That sounds Gret What Can I do For You ?"
+      if 'can you find a friend for me ?' in uper_lower_text:
+            return "Ummm You need to talk with humans not me :(. Did You Find It hard to talk with humans?"
+      if 'Yes' in uper_lower_text:
+            return "Hey You Are a Wonderfull person, Why You don't try talking one?"
       
+      return "I Don't Understand What To Do, Help Me Please !!"
+
+
+     
 
 
 
